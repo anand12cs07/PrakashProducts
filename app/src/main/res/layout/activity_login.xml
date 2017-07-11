@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#313131"
+    tools:context="com.andyapp.prakashproducts.LoginActivity">
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:background="@drawable/bg_toolbar"
+        android:minHeight="@dimen/btn_min_height"
+        android:text="@string/signup"
+        android:textAllCaps="false"
+        android:textSize="@dimen/login_textsize"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/sign_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:background="@drawable/right_border_button"
+        android:minHeight="@dimen/btn_min_height"
+        android:text="@string/signin"
+        android:textAllCaps="false"
+        android:textSize="@dimen/login_textsize"
+        android:textStyle="normal" />
+
+</android.support.design.widget.CoordinatorLayout>

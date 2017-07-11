@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Prakash Products</string>
+
+    <string name="navigation_drawer_open">Openr</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <string name="title">Prakash Products</string>
+    <string name="sub_title">Kasim Bazar, Town Hall Road, Ballia</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="signin">SignIn</string>
+    <string name="signup">SignUp</string>
+
+    <string name="share_caption">Check out Prakash Products for your Smartphone. Download it today from</string>
+    <string name="app_link">https://play.google.com/store/apps/details?id=com.andyapp.prakashproducts</string>
+
+    <string-array name="category_title">
+        <item>Beds</item>
+        <item>Chairs</item>
+        <item>Cum Beds</item>
+        <item>Dinning Tables</item>
+        <item>Office Chairs</item>
+        <item>Sofa</item>
+    </string-array>
+
+    <string-array name="category_subtitle">
+        <item>Varieties of Beds from classical look to stylish</item>
+        <item>Lots of chair of your choice</item>
+        <item>Fancy Cum Beds</item>
+        <item>Select Dinning Table of your on choice</item>
+        <item>Lots of option for your choice</item>
+        <item>Rich quality of sofa within range</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
