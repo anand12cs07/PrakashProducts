@@ -27,6 +27,7 @@ public class SplashScreen extends AppCompatActivity {
         ImageView root = (ImageView)findViewById(R.id.splash_root);
         Glide.with(this).load(R.drawable.splashscreenbg).into(root);
         title.setTypeface(FontUtils.getInstance().getTypeFace(FontUtils.NOVECENTOSANWIDE,this));
+
         initVolley();
     }
 
