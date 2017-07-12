@@ -7,6 +7,7 @@ public class ItemModel implements Serializable{
     private static ItemModel itemModel;
     private boolean isLiked;
     private String itemName;
+    private String itemSmallImage;
     private String itemImage;
     private String itemWeight;
     private String itemSize;
@@ -40,6 +41,14 @@ public class ItemModel implements Serializable{
 
     public void setItemImage(String itemImage) {
         this.itemImage = itemImage;
+    }
+
+    public String getItemSmallImage() {
+        return itemSmallImage;
+    }
+
+    public void setItemSmallImage(String itemSmallImage) {
+        this.itemSmallImage = itemSmallImage;
     }
 
     public String getItemWeight() {

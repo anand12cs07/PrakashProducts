@@ -11,7 +11,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#ecebeb">
 
         <FrameLayout
             android:layout_width="@dimen/_135sdp"
@@ -43,6 +44,7 @@
             android:layout_marginBottom="-312dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="0dp"
+            android:background="@drawable/overline"
             android:text="Double Bed"
             android:textColor="#202121"
             android:textSize="@dimen/_14ssp"
@@ -85,6 +87,7 @@
             android:layout_height="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_2sdp"
             android:layout_marginLeft="6dp"
+            android:focusable="true"
             android:background="@drawable/ic_like_unselect"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -94,11 +97,13 @@
             android:id="@+id/card_child_share"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:layout_marginBottom="@dimen/_2sdp"
             android:layout_marginLeft="6dp"
             android:background="@drawable/ic_share"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/card_child_like" />
+            app:layout_constraintLeft_toRightOf="@+id/card_child_like"
+            app:layout_constraintTop_toTopOf="@+id/card_child_like"
+            android:layout_marginTop="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/card_child_like"
+            android:layout_marginBottom="0dp" />
 
         <android.support.constraint.Guideline
             android:id="@+id/card_child_gd_ver"

@@ -11,7 +11,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4">
 
         <FrameLayout
             android:layout_width="@dimen/_135sdp"
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="3dp"
             android:text="Double Bed"
+            android:background="@drawable/overline"
             android:textColor="#202121"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"

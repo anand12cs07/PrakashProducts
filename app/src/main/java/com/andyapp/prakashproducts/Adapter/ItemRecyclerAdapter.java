@@ -51,7 +51,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
         int count = 0;
         holder.title.setText(itemModels.get(position).getItemName());
         holder.weight.setText(itemModels.get(position).getItemPrice());
-        Glide.with(context).load(itemModels.get(position).getItemImage()).into(holder.img);
+        Glide.with(context).load(itemModels.get(position).getItemSmallImage()).into(holder.img);
         holder.progressBar.setVisibility(View.GONE);
 
         holder.like.setOnClickListener(new View.OnClickListener() {

@@ -41,6 +41,10 @@ public class AppController extends Application {
         return appController;
     }
 
+    public void setConnectivityListener(ConnectivityReceiver.ConnectivityReceiverListener listener) {
+        ConnectivityReceiver.connectivityReceiverListener = listener;
+    }
+
     public boolean isAppFirstLaunch() {
         return preferences.getBoolean(APP_FIRST_LAUNCH, false);
     }

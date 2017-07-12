@@ -50,6 +50,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
+                itemModel.setItemSmallImage(itemObject.getString("image"));
 
                 itemBeds.add(itemModel);
             }
@@ -70,7 +71,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
-
+                itemModel.setItemSmallImage(itemObject.getString("image"));
                 itemChairs.add(itemModel);
             }
         } catch (Exception e) {
@@ -90,7 +91,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
-
+                itemModel.setItemSmallImage(itemObject.getString("image"));
                 itemCumBeds.add(itemModel);
             }
         } catch (Exception e) {
@@ -110,7 +111,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
-
+                itemModel.setItemSmallImage(itemObject.getString("image"));
                 itemDinningTables.add(itemModel);
             }
         } catch (Exception e) {
@@ -130,7 +131,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
-
+                itemModel.setItemSmallImage(itemObject.getString("image"));
                 itemOfficeChairs.add(itemModel);
             }
         } catch (Exception e) {
@@ -150,7 +151,7 @@ public class ApiBuilder {
 //                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
-
+                itemModel.setItemSmallImage(itemObject.getString("image"));
                 itemSofas.add(itemModel);
             }
         } catch (Exception e) {
