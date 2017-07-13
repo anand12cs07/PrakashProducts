@@ -6,7 +6,6 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -15,8 +14,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.andyapp.prakashproducts.Utils.ApiBuilder;
 import com.andyapp.prakashproducts.Utils.ConnectivityReceiver;
-import com.andyapp.prakashproducts.Utils.FontUtils;
-import com.bumptech.glide.Glide;
 
 public class SplashScreen extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
