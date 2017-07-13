@@ -23,8 +23,8 @@ public class CategoryRecyclerAdapter extends RecyclerView.Adapter<CategoryRecycl
 
     private String[] subtitleArray;
 
-    private int[] imageResourceArray = {R.drawable.toolbarimg, R.drawable.toolbarimg1, R.drawable.toolbarimg2,
-            R.drawable.toolbarimg3, R.drawable.toolbarimg1, R.drawable.toolbarimg};
+    private int[] imageResourceArray = {R.drawable.bed, R.drawable.chair, R.drawable.cumbed,
+            R.drawable.dinning, R.drawable.officechair, R.drawable.sofa};
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 

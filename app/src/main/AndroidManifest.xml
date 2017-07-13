@@ -38,7 +38,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
-            android:name="com.andyapp.prakashproducts.ConnectivityReceiver"
+            android:name="com.andyapp.prakashproducts.Utils.ConnectivityReceiver"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />

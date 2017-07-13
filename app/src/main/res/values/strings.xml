@@ -13,6 +13,7 @@
 
     <string name="share_caption">Check out Prakash Products for your Smartphone. Download it today from</string>
     <string name="app_link">https://play.google.com/store/apps/details?id=com.andyapp.prakashproducts</string>
+    <string name="about_us"><b> About Us \n</b> Hi coming Soon...</string>
 
     <string-array name="category_title">
         <item>Beds</item>

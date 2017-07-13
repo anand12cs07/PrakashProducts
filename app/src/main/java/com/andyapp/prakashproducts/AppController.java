@@ -10,6 +10,8 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.andyapp.prakashproducts.Utils.ConnectivityReceiver;
+import com.andyapp.prakashproducts.Utils.FontUtils;
 
 
 public class AppController extends Application {
@@ -33,6 +35,7 @@ public class AppController extends Application {
         appController = this;
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         editor = preferences.edit();
+        FontUtils.getInstance().setTypeface(this);
     }
 
     public static synchronized AppController getInstance() {

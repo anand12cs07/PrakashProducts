@@ -1,10 +1,12 @@
-package com.andyapp.prakashproducts;
+package com.andyapp.prakashproducts.Utils;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import com.andyapp.prakashproducts.AppController;
 
 public class ConnectivityReceiver extends BroadcastReceiver {
 
