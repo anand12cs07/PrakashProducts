@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@color/colorPrimary"
@@ -10,14 +11,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    tools:ignore="MissingPrefix">
 
     <ImageView
         android:layout_width="@dimen/_75sdp"
         android:layout_height="@dimen/_75sdp"
         android:layout_gravity="center"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:srcCompat="@drawable/ic_launcher" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,6 +27,6 @@
         android:gravity="center_vertical"
         android:text="@string/app_name"
         android:textSize="@dimen/_18ssp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:textColor="@android:color/white"/>
 
 </LinearLayout>

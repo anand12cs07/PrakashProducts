@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="5dp"
+    android:layout_marginTop="@dimen/_4sdp"
     android:background="@android:drawable/list_selector_background"
     android:maxHeight="140dp"
-    app:cardCornerRadius="3dp"
-    app:cardElevation="3dp">
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="@dimen/_3ssp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -16,7 +16,7 @@
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/card_parent_img"
             android:layout_width="0dp"
-            android:layout_height="100dp"
+            android:layout_height="@dimen/_92sdp"
             android:layout_marginBottom="0dp"
             app:layout_constraintDimensionRatio="w,3:2"
             android:scaleType="fitXY"
@@ -28,13 +28,12 @@
             android:id="@+id/card_parent_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/_4sdp"
             android:lines="1"
             android:text="Card Parent Title"
             android:textAllCaps="false"
             android:textColor="@color/cardview_dark_background"
-            android:textSize="18sp"
+            android:textSize="@dimen/_15ssp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="@+id/card_parent_gd_ver1"
             app:layout_constraintTop_toTopOf="@+id/card_parent_img" />
@@ -43,9 +42,9 @@
             android:id="@+id/card_parent_subtitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_15sdp"
             android:maxLines="3"
             android:text="Card Parent Sub Title Card Parent Sub Title Card Parent Sub Title Card Parent Sub TitleCard Parent Sub Title"
             android:textAllCaps="false"
@@ -57,8 +56,8 @@
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/card_parent_arrow"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="@dimen/_26sdp"
+            android:layout_height="@dimen/_26sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"

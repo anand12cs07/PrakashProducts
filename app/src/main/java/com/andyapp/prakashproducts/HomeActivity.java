@@ -1,6 +1,7 @@
 package com.andyapp.prakashproducts;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
@@ -19,6 +20,8 @@ import android.view.MenuItem;
 
 import com.andyapp.prakashproducts.Fragments.HomeFragment;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar mtoolbar;
@@ -33,13 +36,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         mtoolbar = (Toolbar) findViewById(R.id.toolbar);
         mnavigationView = (NavigationView) findViewById(R.id.nav_view);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
+        mtoolbar.setTitle("");
         setSupportActionBar(mtoolbar);
         mtoggle = new ActionBarDrawerToggle(this, mDrawerLayout, mtoolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.addDrawerListener(mtoggle);
         mtoggle.syncState();
 
         getSupportFragmentManager().beginTransaction().add(R.id.content, new HomeFragment(), HomeFragment.TAG).commit();
+
 
         mnavigationView.setNavigationItemSelectedListener(this);
     }
@@ -73,8 +77,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
-    public Toolbar getToolbar() {
-        return mtoolbar;
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     @Override
@@ -85,6 +90,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             showAlertDialog();
         else
             getSupportFragmentManager().popBackStackImmediate();
+    }
+
+    public Toolbar getToolbar() {
+        return mtoolbar;
     }
 
     private void showAlertDialog() {

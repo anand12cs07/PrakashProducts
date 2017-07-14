@@ -14,12 +14,12 @@ public class ApiBuilder {
     public String JSON_URL = "https://anandat1195.000webhostapp.com/Prakash%20Product/prakash%20product.json";
 
     private static ApiBuilder mBuilder;
-    public ArrayList<ItemModel> itemBeds = new ArrayList<ItemModel>();
-    public ArrayList<ItemModel> itemChairs = new ArrayList<ItemModel>();
-    public ArrayList<ItemModel> itemCumBeds = new ArrayList<ItemModel>();
-    public ArrayList<ItemModel> itemDinningTables = new ArrayList<ItemModel>();
-    public ArrayList<ItemModel> itemOfficeChairs = new ArrayList<ItemModel>();
-    public ArrayList<ItemModel> itemSofas = new ArrayList<ItemModel>();
+    public ArrayList<ItemModel> itemBeds;
+    public ArrayList<ItemModel> itemChairs;
+    public ArrayList<ItemModel> itemCumBeds;
+    public ArrayList<ItemModel> itemDinningTables;
+    public ArrayList<ItemModel> itemOfficeChairs;
+    public ArrayList<ItemModel> itemSofas;
     private String response = "";
 
     public static ApiBuilder getBuilder() {
@@ -39,6 +39,7 @@ public class ApiBuilder {
     }
 
     private void getItemBeds() {
+        itemBeds = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("beds");
@@ -60,6 +61,7 @@ public class ApiBuilder {
     }
 
     private void getItemChairs() {
+        itemChairs = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("chairs");
@@ -80,6 +82,7 @@ public class ApiBuilder {
     }
 
     private void getItemCumBeds() {
+        itemCumBeds = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("comb beds");
@@ -100,6 +103,7 @@ public class ApiBuilder {
     }
 
     private void getItemDinningTables() {
+        itemDinningTables = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("dinning tables");
@@ -120,6 +124,7 @@ public class ApiBuilder {
     }
 
     private void getItemOfficeChairs() {
+        itemOfficeChairs = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("office chairs");
@@ -140,6 +145,7 @@ public class ApiBuilder {
     }
 
     private void getItemSofas() {
+        itemSofas = new ArrayList<ItemModel>();
         try {
             JSONObject object = new JSONObject(response);
             JSONArray array = object.getJSONArray("sofa");

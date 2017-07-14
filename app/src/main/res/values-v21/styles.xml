@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -19,11 +19,13 @@
     <style name="ToolbarTitleAppearence" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">#ffffff</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance</item>
     </style>
 
     <style name="ToolbarSubTitleAppearence" parent="TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
         <item name="android:textSize">12sp</item>
         <item name="android:textColor">#878787</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance</item>
     </style>
 
     <style name="CustomTextAppearance">

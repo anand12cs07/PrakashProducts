@@ -16,8 +16,7 @@
             android:layout_width="@dimen/_80sdp"
             android:layout_height="@dimen/_80sdp"
             android:layout_gravity="center"
-            android:background="@mipmap/ic_launcher_round"
-            android:scaleType="fitXY" />
+            android:background="@drawable/ic_launcher" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/splash_title"

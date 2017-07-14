@@ -1,6 +1,8 @@
 package com.andyapp.prakashproducts;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -12,13 +14,18 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.andyapp.prakashproducts.Utils.ApiBuilder;
 import com.andyapp.prakashproducts.Utils.ConnectivityReceiver;
+import com.andyapp.prakashproducts.Utils.FontUtils;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashScreen extends AppCompatActivity implements ConnectivityReceiver.ConnectivityReceiverListener {
 
     private TextView title;
     private ProgressBar progressBar;
+    private ConnectivityReceiver receiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +34,6 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
         title = (TextView) findViewById(R.id.splash_title);
         progressBar = (ProgressBar) findViewById(R.id.splash_progress);
         progressBar.setVisibility(View.GONE);
-
         initVolley();
     }
 
@@ -42,7 +48,7 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
                 if (AppController.getInstance().isIsLogIn())
                     startActivity(new Intent(SplashScreen.this, HomeActivity.class));
                 else
-                    startActivity(new Intent(SplashScreen.this, LoginActivity.class));
+                    startActivity(new Intent(SplashScreen.this, HomeActivity.class));
 
                 SplashScreen.this.finish();
             }
@@ -57,6 +63,11 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
         AppController.getInstance().addToRequestQueue(request, "item_request");
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     private void showSnack() {
         Snackbar snackbar = Snackbar.make(title, "Check your Internet Connection !!!", Snackbar.LENGTH_LONG);
         snackbar.show();
@@ -65,7 +76,18 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
     @Override
     protected void onResume() {
         super.onResume();
+        IntentFilter filter = new IntentFilter();
+        if (receiver == null)
+            receiver = new ConnectivityReceiver();
+        filter.addAction("com.andyapp.prakashproducts.Utils.ConnectivityReceiver");
+        registerReceiver(receiver, filter);
         AppController.getInstance().setConnectivityListener(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unregisterReceiver(receiver);
     }
 
     @Override
@@ -76,6 +98,7 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
 
     @Override
     public void onNetworkConnectionChanged(boolean isConnected) {
+        AppController.getInstance().cancelPendingRequests("item_request");
         if (isConnected)
             initVolley();
     }

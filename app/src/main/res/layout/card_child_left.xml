@@ -5,9 +5,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
+    android:background="@android:drawable/list_selector_background"
     android:paddingLeft="@dimen/_5sdp"
-    android:paddingRight="@dimen/_5sdp"
-    android:background="@android:drawable/list_selector_background">
+    android:paddingRight="@dimen/_5sdp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
                 android:id="@+id/card_child_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
 
         </FrameLayout>
 
@@ -42,14 +42,13 @@
             android:id="@+id/card_child_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:text="Double Bed"
+            android:layout_marginBottom="@dimen/_3sdp"
             android:background="@drawable/overline"
+            android:text="Double Bed"
             android:textColor="#202121"
             android:textSize="@dimen/_14ssp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/card_child_subtitle"
-            app:layout_constraintHorizontal_bias="0.514"
             app:layout_constraintLeft_toLeftOf="@+id/card_child_gd_ver"
             app:layout_constraintRight_toRightOf="parent" />
 
@@ -57,37 +56,25 @@
             android:id="@+id/card_child_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
-            android:layout_marginEnd="108dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginStart="108dp"
-            android:layout_marginVertical="@dimen/_3sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
             android:text="Weight 46 Kg"
             android:textColor="#202121"
             android:textSize="@dimen/_11ssp"
             app:layout_constraintBottom_toTopOf="@+id/appCompatTextView"
             app:layout_constraintLeft_toLeftOf="@+id/card_child_title"
-            app:layout_constraintRight_toRightOf="@+id/card_child_title"
-            tools:layout_constraintLeft_creator="1"
-            tools:layout_constraintRight_creator="1" />
+            app:layout_constraintRight_toRightOf="@+id/card_child_title" />
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/appCompatTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginEnd="152dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="152dp"
             android:layout_marginVertical="@dimen/_3sdp"
             android:background="@color/cardview_dark_background"
             android:paddingLeft="@dimen/_3sdp"
             android:paddingRight="@dimen/_3sdp"
             android:text="View"
             android:textColor="#ffffff"
-            android:textSize="@dimen/_10ssp"
+            android:textSize="@dimen/_11ssp"
             app:layout_constraintBottom_toTopOf="@+id/card_child_gd_hor"
             app:layout_constraintLeft_toLeftOf="@+id/card_child_subtitle"
             app:layout_constraintRight_toRightOf="@+id/card_child_subtitle" />
@@ -99,6 +86,7 @@
             android:layout_marginBottom="@dimen/_2sdp"
             android:layout_marginRight="@dimen/_5sdp"
             android:background="@drawable/ic_like_unselect"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/card_child_gd_hor" />
@@ -110,6 +98,7 @@
             android:layout_marginBottom="@dimen/_2sdp"
             android:layout_marginRight="@dimen/_5sdp"
             android:background="@drawable/ic_share"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toLeftOf="@+id/card_child_like"
             app:layout_constraintTop_toBottomOf="@id/card_child_gd_hor" />

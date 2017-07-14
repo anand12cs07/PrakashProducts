@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 
 
 public class HomeFragment extends Fragment implements ViewPager.OnPageChangeListener,
-        CategoryRecyclerAdapter.OnitemClickLisener {
+        CategoryRecyclerAdapter.OnitemClickLisener, View.OnTouchListener {
 
     private View view;
     private byte count = 0;
@@ -43,7 +44,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mcustomPagerAdapter = new HomePagerAdapter(getActivity());
-        toolbar = ((HomeActivity)getActivity()).getToolbar();
+        toolbar = ((HomeActivity) getActivity()).getToolbar();
 
     }
 
@@ -66,6 +67,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
 
         adapter.getOnItemClickLisener(this);
         mviewPager.addOnPageChangeListener(this);
+        mviewPager.setOnTouchListener(this);
         return view;
     }
 
@@ -96,7 +98,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
                 break;
         }
         bundle.putSerializable(BUNDLE_LIST_TAG, itemModels);
-        bundle.putInt(BUNDLE_POSITION_TAG,position);
+        bundle.putInt(BUNDLE_POSITION_TAG, position);
         itemsFragment.setArguments(bundle);
         getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.content, itemsFragment).addToBackStack(null).commit();
     }
@@ -104,22 +106,25 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     private void runCrousel() {
 
         mhandler = new Handler();
-        mhandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // runnable get stop on activity destroy
-                if (!mRunUiThread)
-                    return;
-                if (mviewPager.getCurrentItem() < pagerResourceSize)
-                    count++;
-                else
-                    count = 0;
-                mviewPager.setCurrentItem(count);
-                // To restart handler once runnable get executed
-                mhandler.postDelayed(this, 3000);
-            }
-        }, 3000);
+        mhandler.postDelayed(runnable, 3000);
     }
+
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            // runnable get stop on activity destroy
+            if (!mRunUiThread)
+                return;
+            if (mviewPager.getCurrentItem() < pagerResourceSize)
+                count++;
+            else
+                count = 0;
+            mviewPager.setCurrentItem(count);
+            // To restart handler once runnable get executed
+            mhandler.postDelayed(this, 3000);
+
+        }
+    };
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -129,11 +134,20 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     @Override
     public void onPageSelected(int position) {
         count = (byte) position;
+        if (!mRunUiThread) {
+            mRunUiThread = true;
+            mhandler.removeCallbacks(runnable);
+            mhandler.postDelayed(runnable, 3000);
+        }
     }
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
+        if (!mRunUiThread) {
+            mRunUiThread = true;
+            mhandler.removeCallbacks(runnable);
+            mhandler.postDelayed(runnable, 3000);
+        }
     }
 
     @Override
@@ -156,4 +170,9 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     }
 
 
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        mRunUiThread = false;
+        return false;
+    }
 }

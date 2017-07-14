@@ -13,7 +13,10 @@
 
     <string name="share_caption">Check out Prakash Products for your Smartphone. Download it today from</string>
     <string name="app_link">https://play.google.com/store/apps/details?id=com.andyapp.prakashproducts</string>
-    <string name="about_us"><b> About Us \n</b> Hi coming Soon...</string>
+    <string name="about_us"><b> About Prakash Products \n</b>Prakash Products is an official online platform provided by:\n\n<b>Prakash Steel Furniture Shop</b>
+        \nKasim bazar, \nTown Hall Road, \nBallia, U.P. \nIndia. \n \nThis platform is provided to review our available products online with respective
+        specification to our users. \n \nPrakash Products Android App Version 1.0.0 \nIt is still evolving and we are committed to making
+        it a better every day. \n\nHelp us to improve.\n </string>
 
     <string-array name="category_title">
         <item>Beds</item>

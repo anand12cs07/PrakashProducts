@@ -1,6 +1,7 @@
 package com.andyapp.prakashproducts;
 
 import android.app.Application;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
@@ -11,7 +12,9 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 import com.andyapp.prakashproducts.Utils.ConnectivityReceiver;
-import com.andyapp.prakashproducts.Utils.FontUtils;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.R;
 
 
 public class AppController extends Application {
@@ -35,7 +38,11 @@ public class AppController extends Application {
         appController = this;
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         editor = preferences.edit();
-        FontUtils.getInstance().setTypeface(this);
+
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder().
+                setDefaultFontPath("fonts/Ubuntu.otf").
+                setFontAttrId(R.attr.fontPath).build());
+
     }
 
     public static synchronized AppController getInstance() {

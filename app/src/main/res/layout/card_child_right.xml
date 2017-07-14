@@ -5,9 +5,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="5dp"
+    android:background="@android:drawable/list_selector_background"
     android:paddingLeft="@dimen/_5sdp"
-    android:paddingRight="@dimen/_5sdp"
-    android:background="@android:drawable/list_selector_background">
+    android:paddingRight="@dimen/_5sdp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
@@ -18,8 +18,8 @@
             android:layout_width="@dimen/_135sdp"
             android:layout_height="0dp"
             android:maxHeight="@dimen/_150sdp"
-            app:layout_constraintDimensionRatio="h,9:8"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="h,9:8"
             app:layout_constraintLeft_toLeftOf="@+id/card_child_gd_ver"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -34,16 +34,14 @@
                 android:id="@+id/card_child_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
         </FrameLayout>
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/card_child_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="-312dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
+            android:layout_marginBottom="@dimen/_3sdp"
             android:background="@drawable/overline"
             android:text="Double Bed"
             android:textColor="#202121"
@@ -57,7 +55,7 @@
             android:id="@+id/card_child_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="@dimen/_3sdp"
             android:text="Weight 46 Kg"
             android:textColor="#202121"
             android:textSize="@dimen/_11ssp"
@@ -69,26 +67,25 @@
             android:id="@+id/appCompatTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="@dimen/_3sdp"
             android:background="@color/cardview_dark_background"
             android:paddingLeft="@dimen/_3sdp"
             android:paddingRight="@dimen/_3sdp"
             android:text="View"
             android:textColor="#ffffff"
-            android:textSize="@dimen/_10ssp"
+            android:textSize="@dimen/_11ssp"
             app:layout_constraintBottom_toTopOf="@+id/card_child_gd_hor"
             app:layout_constraintLeft_toLeftOf="@+id/card_child_subtitle"
-            app:layout_constraintRight_toRightOf="@+id/card_child_subtitle"
-            tools:layout_editor_absoluteY="74dp" />
+            app:layout_constraintRight_toRightOf="@+id/card_child_subtitle"/>
 
         <ImageButton
             android:id="@+id/card_child_like"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_2sdp"
-            android:layout_marginLeft="6dp"
-            android:focusable="true"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:background="@drawable/ic_like_unselect"
+            android:focusable="true"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/card_child_gd_hor" />
@@ -97,13 +94,14 @@
             android:id="@+id/card_child_share"
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
-            android:layout_marginLeft="6dp"
-            android:background="@drawable/ic_share"
-            app:layout_constraintLeft_toRightOf="@+id/card_child_like"
-            app:layout_constraintTop_toTopOf="@+id/card_child_like"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginTop="0dp"
+            android:background="@drawable/ic_share"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="@+id/card_child_like"
-            android:layout_marginBottom="0dp" />
+            app:layout_constraintLeft_toRightOf="@+id/card_child_like"
+            app:layout_constraintTop_toTopOf="@+id/card_child_like" />
 
         <android.support.constraint.Guideline
             android:id="@+id/card_child_gd_ver"

@@ -23,7 +23,7 @@ public class HomePagerAdapter extends PagerAdapter {
 
     @Override
     public int getCount() {
-        return mResource.length;
+        return 100;
     }
 
     @Override
@@ -31,7 +31,7 @@ public class HomePagerAdapter extends PagerAdapter {
         View itemView = mLayoutInflater.inflate(R.layout.viewpager_content_home, container, false);
 
         ImageView imageView = (ImageView) itemView.findViewById(R.id.viewpager_img);
-        Glide.with(mContext).load(mResource[position]).into(imageView);
+        Glide.with(mContext).load(mResource[position%4]).into(imageView);
 
         container.addView(itemView);
 
