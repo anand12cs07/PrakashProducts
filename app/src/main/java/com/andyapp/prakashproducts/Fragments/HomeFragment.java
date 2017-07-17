@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     private byte count = 0;
     private byte pagerResourceSize = 99;
     private ViewPager mviewPager;
-    private static Handler mhandler;
+    private Handler mhandler;
     private RecyclerView mRecyclerView;
     private boolean mRunUiThread = true;
     private Toolbar toolbar;
