@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     private byte count = 0;
     private byte pagerResourceSize = 99;
     private ViewPager mviewPager;
-    private Handler mhandler;
+    private static Handler mhandler;
     private RecyclerView mRecyclerView;
     private boolean mRunUiThread = true;
     private Toolbar toolbar;
@@ -104,8 +104,9 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     }
 
     private void runCrousel() {
-
-        mhandler = new Handler();
+        if (mhandler == null)
+            mhandler = new Handler();
+        mhandler.removeCallbacks(runnable);
         mhandler.postDelayed(runnable, 3000);
     }
 
@@ -136,8 +137,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         count = (byte) position;
         if (!mRunUiThread) {
             mRunUiThread = true;
-            mhandler.removeCallbacks(runnable);
-            mhandler.postDelayed(runnable,3000);
+            runCrousel();
         }
     }
 
@@ -145,8 +145,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     public void onPageScrollStateChanged(int state) {
         if (!mRunUiThread) {
             mRunUiThread = true;
-            mhandler.removeCallbacks(runnable);
-            mhandler.postDelayed(runnable,3000);
+            runCrousel();
         }
     }
 
@@ -154,7 +153,6 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     public void onResume() {
         super.onResume();
         mRunUiThread = true;
-        mhandler.removeCallbacks(runnable);
         runCrousel();
     }
 
