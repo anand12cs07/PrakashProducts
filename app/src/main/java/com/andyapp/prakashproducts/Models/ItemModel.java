@@ -9,7 +9,7 @@ public class ItemModel implements Serializable{
     private String itemName;
     private String itemSmallImage;
     private String itemImage;
-    private String itemWeight;
+    private String itemWeight = "";
     private String itemSize;
     private String itemPrice;
 
@@ -52,10 +52,13 @@ public class ItemModel implements Serializable{
     }
 
     public String getItemWeight() {
+        if (itemWeight == "")
+            itemWeight = "56 Kg";
         return itemWeight;
     }
 
     public void setItemWeight(String itemWeight) {
+        this.itemWeight = "";
         this.itemWeight = itemWeight;
     }
 

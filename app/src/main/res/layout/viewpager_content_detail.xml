@@ -6,51 +6,137 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/viewPager_itemImage"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.85"
-        android:id="@+id/viewPager_itemImage"
         android:background="@android:color/white" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/viewPager_itemName"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="@dimen/_2sdp"
-        android:text="Bed-PP-01"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_16ssp"
-        android:textStyle="bold" />
+        android:orientation="horizontal">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/viewPager_itemWeight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="@dimen/_2sdp"
-        android:text="76 Kg"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_14ssp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:padding="@dimen/_2sdp"
+            android:text="Model:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/viewPager_itemPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:padding="@dimen/_2sdp"
-        android:text=" Rs. 16,000"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_14ssp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/viewPager_itemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_2sdp"
+            android:text="Bed-PP-01"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/viewPager_itemDimension"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:padding="@dimen/_2sdp"
-        android:text="7 feet X 7 feet"
-        android:textColor="@android:color/white"
-        android:textSize="@dimen/_14ssp" />
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:padding="@dimen/_2sdp"
+            android:text="Weight:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/viewPager_itemWeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_2sdp"
+            android:text="76 Kg"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:padding="@dimen/_2sdp"
+            android:text="Price:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/viewPager_itemPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_2sdp"
+            android:text=" Rs. 16,000"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:padding="@dimen/_2sdp"
+            android:text="Dimension:"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/viewPager_itemDimension"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_weight="0.5"
+            android:padding="@dimen/_2sdp"
+            android:text="7 feet X 7 feet"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_14ssp" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

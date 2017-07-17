@@ -137,7 +137,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         if (!mRunUiThread) {
             mRunUiThread = true;
             mhandler.removeCallbacks(runnable);
-            mhandler.postDelayed(runnable, 3000);
+            mhandler.postDelayed(runnable,3000);
         }
     }
 
@@ -146,7 +146,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
         if (!mRunUiThread) {
             mRunUiThread = true;
             mhandler.removeCallbacks(runnable);
-            mhandler.postDelayed(runnable, 3000);
+            mhandler.postDelayed(runnable,3000);
         }
     }
 
@@ -154,6 +154,7 @@ public class HomeFragment extends Fragment implements ViewPager.OnPageChangeList
     public void onResume() {
         super.onResume();
         mRunUiThread = true;
+        mhandler.removeCallbacks(runnable);
         runCrousel();
     }
 

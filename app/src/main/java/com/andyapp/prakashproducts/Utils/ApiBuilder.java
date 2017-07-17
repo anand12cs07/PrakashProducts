@@ -48,7 +48,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));
@@ -70,7 +71,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                    itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));
@@ -91,7 +93,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                    itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));
@@ -112,7 +115,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                    itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));
@@ -133,7 +137,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                    itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));
@@ -154,7 +159,8 @@ public class ApiBuilder {
                 JSONObject itemObject = array.getJSONObject(i);
                 itemModel.setItemName(itemObject.getString("name"));
                 itemModel.setItemSize(itemObject.getString("dimension"));
-//                itemModel.setItemWeight(itemObject.getString("weight"));
+                if (itemObject.has("weight"))
+                    itemModel.setItemWeight(itemObject.getString("weight"));
                 itemModel.setItemPrice(itemObject.getString("price"));
                 itemModel.setItemImage(itemObject.getString("large image"));
                 itemModel.setItemSmallImage(itemObject.getString("image"));

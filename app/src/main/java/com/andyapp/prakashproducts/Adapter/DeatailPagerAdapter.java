@@ -44,7 +44,7 @@ public class DeatailPagerAdapter extends PagerAdapter {
 
         Glide.with(mContext).load(itemModels.get(position).getItemImage()).into(img);
         name.setText(itemModels.get(position).getItemName());
-        //weight.setText(itemModels.get(position).getItemWeight());
+        weight.setText(itemModels.get(position).getItemWeight());
         price.setText(itemModels.get(position).getItemPrice());
         dimension.setText(itemModels.get(position).getItemSize());
 

@@ -14,10 +14,8 @@ import android.widget.TextView;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.andyapp.prakashproducts.Utils.ApiBuilder;
 import com.andyapp.prakashproducts.Utils.ConnectivityReceiver;
-import com.andyapp.prakashproducts.Utils.FontUtils;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -45,10 +43,7 @@ public class SplashScreen extends AppCompatActivity implements ConnectivityRecei
                 Log.e("OnSuccess >", response);
                 ApiBuilder.getBuilder().setResponse(response);
                 progressBar.setVisibility(View.GONE);
-                if (AppController.getInstance().isIsLogIn())
-                    startActivity(new Intent(SplashScreen.this, HomeActivity.class));
-                else
-                    startActivity(new Intent(SplashScreen.this, HomeActivity.class));
+                startActivity(new Intent(SplashScreen.this, HomeActivity.class));
 
                 SplashScreen.this.finish();
             }
